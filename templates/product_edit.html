@@ -1,0 +1,38 @@
+<div data-role="page" id="product_edit" data-nobackbtn="true">
+    <div data-role="header">
+        <a id="cancelBackButton" href="#" data-icon="delete">Close</a>
+        <h1>{{name}}</h1>
+    </div>
+    <div data-role="content" data-theme="c" style="padding:0em;">
+        <form id="productform" action="#" method="get" data-identity="{{document}}">
+            <div data-role="fieldcontain">
+                <label for="name">Name:</label>
+                <input id="nameField" name="name" type="text" value="{{name}}" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="type">Type:</label>
+                <input id="typeField" name="type" type="text" value="{{type}}" />
+            </div>
+            <div data-role="fieldcontain">
+                <label for="description">Description:</label>
+                <textarea id="descriptionField" name="description" cols="40" rows="8">{{description}}</textarea>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="price">Price:</label>
+                <input id="priceField" name="price" type="text" value="{{price}}" />
+            </div>
+            <div class="ui-body ui-body-b">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <p id="cancelButton" data-role="button" data-theme="d">Cancel</p>
+                    </div>
+                    <div class="ui-block-b">
+                        <p id="submitButton" data-role="button" data-theme="a">Submit</p>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+	<div data-role="footer" data-position="fixed"><h4>Made on a couch</h4></div>
+</div>
+{{>scripts}}
